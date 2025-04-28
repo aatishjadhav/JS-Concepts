@@ -54,12 +54,6 @@
 //  we can do this
 // num[1] = 3;
 
-
-
-
-
-
-
 //Concept Array Methods
 // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -71,7 +65,6 @@
 // arr.forEach((num) => {
 //   console.log(num + 2);
 // });
-
 
 // Concept Hoisting
 // console.log(age);
@@ -86,14 +79,76 @@
 // console.log(marks);
 // let marks = 10
 
-
-
-
-
 // Concept == and ===
 // === checks both the value and type means wheather its string or numeric value or not
 // == checks only the value is same or not || converts the operands to the same type and then compares them.
-let a = 10;
-let b = "10"
-console.log(a == b); // true
-console.log(a === b); // false
+// let a = 10;
+// let b = "10"
+// console.log(a == b); // true
+// console.log(a === b); // false
+
+// Concept Implicit and Explicit binding using this keyword
+
+// Implicit binding
+// let ask = {
+//   teacher: "Ajay",
+//   who: function () {
+//     console.log(this.teacher);
+//   },
+// };
+// ask.who();
+
+// Explicit binding
+
+//call method
+// function clarify() {
+//   console.log("Clarify with ", this.mentor);
+// }
+
+// let teacher = {
+//   mentor: "Akansha",
+// };
+
+// clarify.call(teacher);
+
+function clarify() {
+  console.log("Clarify with ", this.mentor);
+}
+
+let teacher1 = {
+  mentor: "Akansha",
+};
+let teacher2 = {
+  mentor: "Tanay",
+};
+
+clarify.call(teacher1);
+clarify.call(teacher2);
+
+// bind method
+
+// let name = {
+//   firstName: "Amay",
+//   lastName: "Patel",
+// };
+
+// let printFullname = function (age) {
+//   console.log(this.firstName, this.lastName, age);
+// };
+
+// let printName = printFullname.bind(name, 27);
+// printName();
+
+// apply method
+
+let name = {
+    firstName: "Amay",
+    lastName: "Patel",
+  };
+  
+  let printFullname = function (age, favCol, phNum) {
+    console.log(this.firstName, this.lastName, age, favCol, phNum);
+  };
+  
+  printFullname.apply(name, [27, "Red", "1234567890"]);
+
