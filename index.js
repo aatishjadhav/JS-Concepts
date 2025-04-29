@@ -111,19 +111,19 @@
 
 // clarify.call(teacher);
 
-function clarify() {
-  console.log("Clarify with ", this.mentor);
-}
+// function clarify() {
+//   console.log("Clarify with ", this.mentor);
+// }
 
-let teacher1 = {
-  mentor: "Akansha",
-};
-let teacher2 = {
-  mentor: "Tanay",
-};
+// let teacher1 = {
+//   mentor: "Akansha",
+// };
+// let teacher2 = {
+//   mentor: "Tanay",
+// };
 
-clarify.call(teacher1);
-clarify.call(teacher2);
+// clarify.call(teacher1);
+// clarify.call(teacher2);
 
 // bind method
 
@@ -141,14 +141,95 @@ clarify.call(teacher2);
 
 // apply method
 
-let name = {
-    firstName: "Amay",
-    lastName: "Patel",
-  };
-  
-  let printFullname = function (age, favCol, phNum) {
-    console.log(this.firstName, this.lastName, age, favCol, phNum);
-  };
-  
-  printFullname.apply(name, [27, "Red", "1234567890"]);
+// let name = {
+//     firstName: "Amay",
+//     lastName: "Patel",
+//   };
 
+//   let printFullname = function (age, favCol, phNum) {
+//     console.log(this.firstName, this.lastName, age, favCol, phNum);
+//   };
+
+//   printFullname.apply(name, [27, "Red", "1234567890"]);
+
+// let ask = {
+//   teacher: "Abhay",
+//   who: function () {
+//     console.log(this.teacher);
+//   },
+// };
+
+// ask.who();
+
+// function clarify() {
+//   console.log("Clarify with ", this.mentor);
+// }
+
+// let teacher1 = {
+//   mentor: "Akanksha",
+// };
+// let teacher2 = {
+//   mentor: "Abhay",
+// };
+
+// clarify.call(teacher1);
+// clarify.call(teacher2);
+
+// let details = {
+//   firstName: "Pratik",
+//   lastName: "Jadhav",
+// };
+
+// let getFullame = function (age) {
+//   console.log(this.firstName, this.lastName, age);
+// };
+
+// let printDetails = getFullame.bind(details, 27);
+// printDetails();
+
+// let details = {
+//   firstName: "Pratik",
+//   lastName: "Jadhav",
+// };
+
+// let getFullame = function (age, phNo) {
+//   console.log(this.firstName, this.lastName, age, phNo);
+// };
+
+// getFullame.apply(details, [27, "123456789"]);
+
+// setTimeout
+// function sayHello() {
+//   console.log("Hello, World");
+// }
+// let timeoutId = setTimeout(sayHello, 5000);
+// clearTimeout(timeoutId);
+
+// setInterval
+// function sayHello() {
+//   console.log("Hello, World");
+// }
+
+// Clear Timers
+// let timerId = setInterval(sayHello, 2000);
+
+// function clearTimer() {
+//   clearInterval(timerId);
+//   console.log("Timer Stopped");
+// }
+// setTimeout(clearTimer, 8000);
+
+function runTasks() {
+  console.log("Good Morning");
+
+  setTimeout(() => {
+    console.log("Hello");
+  }, 5000);
+
+  setTimeout(() => {
+    console.log("Hello, World");
+  }, 0);
+
+  console.log("Good Evening");
+}
+runTasks();
