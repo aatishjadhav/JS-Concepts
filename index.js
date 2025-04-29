@@ -219,17 +219,18 @@
 // }
 // setTimeout(clearTimer, 8000);
 
-function runTasks() {
-  console.log("Good Morning");
+// function runTasks() {
+//   console.log("Good Morning");
 
-  setTimeout(() => {
-    console.log("Hello");
-  }, 5000);
+//   setTimeout(() => {
+//     console.log("Hello");
+//   }, 5000);
 
-  setTimeout(() => {
-    console.log("Hello, World");
-  }, 0);
+//   setTimeout(() => {
+//     console.log("Hello, World");
+//   }, 0);
 
-  console.log("Good Evening");
-}
-runTasks();
+//   console.log("Good Evening");
+// }
+// runTasks();
+
